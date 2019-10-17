@@ -8,17 +8,28 @@
     <script src="https://kit.fontawesome.com/fb7f6f30e4.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nobile:400,500|Open+Sans&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <link href="css/nav.css" rel="stylesheet"> 
+    <link href="css/nav.css" rel="stylesheet">
     <title>Layout Times: CSS layouts with calc and custom properties</title>
 </head>
 
 <body>
     <header>
-        <div class="logo">
-            <h1><i class="fas fa-paint-brush"></i> LayOut Times</h1>
-            <h2>Your Web Design Destination</h2>
+        <div class="row">
+            <a href="#main-menu" class="menu-toggle" id="main-menu-toggle" aria-label="Open main menu">
+                <span class="sr-only">Open main menu
+                </span>
+                <span class="fa fa-bars" aria-hidden="true"></span>
+            </a>
+            <div class="logo">
+                <h1><i class="fas fa-paint-brush"></i> LayOut Times</h1>
+                <h2>Your Web Design Destination</h2>
+            </div>
         </div>
-        <nav>
+        <nav id="main-menu" class="main-menu" aria-label="main-menu">
+            <span class="sr-only">Close main menu</span>
+            <a href="#main-menu-toggle" class="menu-close">
+                <span class="fa fa-close" aria-hidden="true"></span>
+            </a>
             <ul>
                 <li><a href="#">CSS Resources</a></li>
                 <li><a href="#">Design</a></li>
@@ -29,6 +40,7 @@
                 <li><a href="#">Top Talent</a></li>
             </ul>
         </nav>
+        <a href="#main-menu-toggle" class="backdrop" hidden tabindex="-1"></a>
     </header>
 
     <main>
@@ -36,14 +48,15 @@
             <h1>Jen’s Awesome Resources</h1>
             <article>
                 <h2>Learn with Jen Kramer online at Harvard Extension </h2>
-                <p>Join some of the many informative courses Jen teaches through the Harvard Extension School. Courses count towards bachelors and masters degree programs, certificates, or take a class for your own enrichment.</p>
+                <p>Join some of the many informative courses Jen teaches through the Harvard Extension School. Courses
+                    count towards bachelors and masters degree programs, certificates, or take a class for your own
+                    enrichment.</p>
                 <ul>
-                    <li><a
-                        href="https://www.extension.harvard.edu/course-catalog/courses?instructors=Kramer,%20Jennifer"
-                        target="_blank">Jen's course list <i class="fas fa-paint-brush"></i></a></li>
-                        <li><a href="http://extension.harvard.edu"
-                        target="_blank">Harvard Extension website <i class="fas fa-paint-brush"></i></a> </li>
-                        </ul>
+                    <li><a href="https://www.extension.harvard.edu/course-catalog/courses?instructors=Kramer,%20Jennifer"
+                            target="_blank">Jen's course list <i class="fas fa-paint-brush"></i></a></li>
+                    <li><a href="http://extension.harvard.edu" target="_blank">Harvard Extension website <i
+                                class="fas fa-paint-brush"></i></a> </li>
+                </ul>
             </article>
             <article>
                 <img src="img/book.png" alt="Before You Code book cover.">
@@ -104,69 +117,69 @@
             </article>
         </section>
         <section id="devs">
-                <h1>Developers to Follow:</h1>
-                <ul>
-                    <li>
-                        <figure>
-                            <a href="http://www.twitter.com/jen4web" target="_blank"><img src="img/jen.png"
-                                    alt="Jen Kramer"></a>
-                            <figcaption>
-                                <p><strong>Jen Kramer</strong><br>
+            <h1>Developers to Follow:</h1>
+            <ul>
+                <li>
+                    <figure>
+                        <a href="http://www.twitter.com/jen4web" target="_blank"><img src="img/jen.png"
+                                alt="Jen Kramer"></a>
+                        <figcaption>
+                            <p><strong>Jen Kramer</strong><br>
                                 Harvard University Extension School <br>
                                 <a href="http://www.twitter.com/jen4web" target="_blank"><i
                                         class="fab fa-twitter-square"></i></a></p>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <a href="http://www.twitter.com/standardista" target="_blank"><img src="img/estelle.png"
-                                    alt="Estelle Weyl"></a>
-                            <figcaption>
-                                <p><strong>Estelle Weyl</strong><br>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <a href="http://www.twitter.com/standardista" target="_blank"><img src="img/estelle.png"
+                                alt="Estelle Weyl"></a>
+                        <figcaption>
+                            <p><strong>Estelle Weyl</strong><br>
                                 Standardista<br>
                                 <a href="http://www.twitter.com/standardista" target="_blank"><i
                                         class="fab fa-twitter-square"></i></a></p>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <a href="http://www.twitter.com/holtbt" target="_blank"><img src="img/brian.png"
-                                    alt="Brian Holt"></a>
-                            <figcaption>
-                                <p><strong>Brian Holt</strong><br>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <a href="http://www.twitter.com/holtbt" target="_blank"><img src="img/brian.png"
+                                alt="Brian Holt"></a>
+                        <figcaption>
+                            <p><strong>Brian Holt</strong><br>
                                 Microsoft<br>
                                 <a href="http://www.twitter.com/holtbt" target="_blank"><i
                                         class="fab fa-twitter-square"></i></a></p>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <a href="http://www.twitter.com/willsentance" target="_blank"><img src="img/will.png"
-                                    alt="Will Sentance"></a>
-                            <figcaption>
-                                <p><strong>Will Sentance</strong><br>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <a href="http://www.twitter.com/willsentance" target="_blank"><img src="img/will.png"
+                                alt="Will Sentance"></a>
+                        <figcaption>
+                            <p><strong>Will Sentance</strong><br>
                                 Codesmith<br>
                                 <a href="http://www.twitter.com/willsentance" target="_blank"><i
                                         class="fab fa-twitter-square"></i></a></p>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <a href="http://www.twitter.com/sarah_edo" target="_blank"><img src="img/sarah.png"
-                                    alt="Jen Kramer"></a>
-                            <figcaption>
-                                <p><strong>Sarah Drasner</strong><br>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <a href="http://www.twitter.com/sarah_edo" target="_blank"><img src="img/sarah.png"
+                                alt="Jen Kramer"></a>
+                        <figcaption>
+                            <p><strong>Sarah Drasner</strong><br>
                                 Microsoft<br>
                                 <a href="http://www.twitter.com/sarah_edo" target="_blank"><i
                                         class="fab fa-twitter-square"></i></a></p>
-                            </figcaption>
-                        </figure>
-                    </li>
-                </ul>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
         </section>
         <section id="resources">
             <h1>Design Resources <small>(credit: Sarah Drasner)</small></h1>
